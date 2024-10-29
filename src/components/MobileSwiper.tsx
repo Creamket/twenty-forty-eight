@@ -49,7 +49,11 @@ const MobileSwiper: FC<MobileSwiperProps> = ({ children, onSwipe }) => {
     }
   }, [handleTouchStart, handleTouchEnd])
 
-  return <div ref={wrapperRef}>{children}</div>
+  return (
+    <div className='flex justify-center items-center' ref={wrapperRef}>
+      {children}
+    </div>
+  )
 }
 
 export default MobileSwiper

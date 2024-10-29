@@ -89,7 +89,7 @@ const BoardComponent: FC = () => {
 
   return (
     <React.Fragment>
-      <div className='flex'>
+      <div className='flex self-start'>
         <div className='px-5 py-2 flex flex-col justify-center items-center m-1 rounded-md text-3xl font-light bg-neutral-800'>
           <div className='text-lg'>turn</div>
           <div>{board?.turn}</div>
@@ -104,7 +104,7 @@ const BoardComponent: FC = () => {
         </div>
       </div>
       <MobileSwiper onSwipe={handleSwipe}>
-        <div className='w-[488px] h-[488px] flex bg-neutral-900 flex-wrap p-1 rounded-md self-center'>
+        <div className='w-[340px] h-[340px] sm:w-[488px] sm:h-[488px] flex bg-neutral-900 flex-wrap p-0.5 sm:p-1 rounded-md self-center'>
           {board?.cells.map((row, index) => (
             <React.Fragment key={index}>
               {row.map((cell) => (
